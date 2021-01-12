@@ -193,8 +193,7 @@ class ServerConfig(object):
     APPLICATION_ROOT: str = empty_str_cast(config_ini["optional"]["APPLICATION_ROOT"]) \
         or "/"
 
-    SERVER_SENT_EVENTS: bool = empty_str_cast(config_ini["optional"]["SERVER_SENT_EVENTS"]) \
-        or True
+    SERVER_SENT_EVENTS: bool = empty_str_cast(config_ini["optional"]["SERVER_SENT_EVENTS"], True)
 
     HTML_SANITIZATION: bool = empty_str_cast(config_ini["optional"]["HTML_SANITIZATION"]) \
         or False

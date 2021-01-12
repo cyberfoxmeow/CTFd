@@ -139,7 +139,7 @@ class ChallengeList(Resource):
                 )
                 .filter_by(**query_args)
                 .filter(*filters)
-                .order_by(Challenges.value)
+                .order_by(Challenges.id)
                 .all()
             )
 
